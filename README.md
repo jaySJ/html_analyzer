@@ -1,5 +1,3 @@
-# html_analyzer
-
 # Html Analyzer
 
 An openMP-enabled multi-threaded C++ porgram that makes GET requests to multiple URL and analyzes the returned HTML body. 
