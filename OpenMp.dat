@@ -1,0 +1,63 @@
+
+Input URL : https://www.ibm.com/docs/en/ztpf/2020?topic=layer-ssl-examples
+Response size = 19988
+
+Input URL : https://www.openssl.org/docs/
+Response size = 4571
+
+Input URL : https://raw.githubusercontent.com/nTopology/JIRA-Priority-Icons/master/LICENSE
+Response size = 1074
+
+Input URL : https://ntopology.com/
+Response size = 79228
+
+Input URL : https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html
+Response size = 9373
+
+Input URL : https://en.cppreference.com/w/cpp/algorithm
+Response size = 240257
+
+Input URL : https://www.stratasys.com/
+Response size = 103297
+
+Input URL : https://github.com/boostorg/beast/issues/824
+Response size = 197619
+
+Input URL : https://www.google.com/search?q=omp_get_num_threads&oq=omp_get_num_threads&aqs=chrome..69i57.12878j0j1&sourceid=chrome&ie=UTF-8
+Response size = 225
+
+Input URL : https://venturebeat.com/
+Response size = 163675
+
+Input URL : https://www.microsoft.com/en-us/
+Response size = 205957
+
+Input URL : https://www.microsoft.com/en-us/?spl=4
+Response size = 205955
+
+Input URL : https://www.apple.com/
+Response size = 72886
+
+Input URL : https://google.com
+Response size = 1564
+
+Input URL : https://www.apple.com/music/
+Response size = 80551
+
+   ID	                                     URL	        # Nodes	   # Leaf Nodes	    # Div Nodes
+    1	https://www.ibm.com/docs/en/ztpf/2020?to	             33             19              1
+    2	           https://www.openssl.org/docs/	            159             46              4
+    3	https://raw.githubusercontent.com/nTopol	              0              0              0
+    4	                  https://ntopology.com/	           1353            330            145
+    5	https://cmake.org/cmake/help/latest/vari	            258             74             14
+    6	https://en.cppreference.com/w/cpp/algori	          11103           1557           1147
+    7	              https://www.stratasys.com/	           1245            353            126
+    8	https://github.com/boostorg/beast/issues	           2538            653            294
+    9	https://www.google.com/search?q=omp_get_	             11              2              0
+   10	                https://venturebeat.com/	           2549            608            111
+   11	        https://www.microsoft.com/en-us/	           1315            380            125
+   12	  https://www.microsoft.com/en-us/?spl=4	           1315            380            125
+   13	                  https://www.apple.com/	           1181            403            101
+   14	                      https://google.com	             20              8              0
+   15	            https://www.apple.com/music/	           1704            509            180
+Elapsed time 21.881 seconds

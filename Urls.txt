@@ -1,0 +1,15 @@
+https://www.ibm.com/docs/en/ztpf/2020?topic=layer-ssl-examples
+https://www.openssl.org/docs/
+https://raw.githubusercontent.com/nTopology/JIRA-Priority-Icons/master/LICENSE
+https://ntopology.com/
+https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html
+https://en.cppreference.com/w/cpp/algorithm
+https://www.stratasys.com/
+https://github.com/boostorg/beast/issues/824
+https://www.google.com/search?q=omp_get_num_threads&oq=omp_get_num_threads&aqs=chrome..69i57.12878j0j1&sourceid=chrome&ie=UTF-8
+https://venturebeat.com/
+https://www.microsoft.com/en-us/
+https://www.microsoft.com/en-us/?spl=4
+https://www.apple.com/
+https://google.com
+https://www.apple.com/music/
