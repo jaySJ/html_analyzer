@@ -45,15 +45,15 @@ This code uses boost::asio library with openSSL to make GET requests. Only versi
 2. Install NASM
 3. Make sure both Perl and NASM are on your %PATH%
 4. Fire up a Visual Studio Developer Command Prompt with *administrative privileges* (make sure you use the 32-bit one if you are building 32-bit OpenSSL, or the 64-bit one if you are building 64-bit OpenSSL)
-5. From the root of the OpenSSL source directory enter perl Configure VC-WIN32, if you want 32-bit OpenSSL or perl Configure VC-WIN64A if you want 64-bit OpenSSL
+5. From the root of the OpenSSL source directory run the following to generate the build configuration for 64-bit OpenSSL
      ```perl Configure VC-WIN64A no-asm no-shared```
-6. Enter `nmake`
-7. (OPTIONAL - it is slow) Enter `nmake test`
+6. Enter `nmake` to build
+7. (OPTIONAL - this is slow) Enter `nmake test` to run tests for openssl
 8. Enter `nmake install`.  This last step will build install openssl static libraries and include files in C:\Program Files\openSSL.
 9. In order to build Boost::Asio library, you will need to create a new environment variable - OPENSSL_ROOT. 
    `OPENSSL_ROOT=C:\Program Files\OpenSSL`
 #### Boost version 1.75.0
-1. To build boost follow instructions
+1. To build boost follow instructions from boost.org for [version 1.75.0](https://www.boost.org/users/history/version_1_75_0.html)
 2. Make sure that `%BOOST_ROOT%` env variable is set to the path to static libraries and include files
 
 # Build the code for this repo
@@ -66,12 +66,12 @@ This code uses boost::asio library with openSSL to make GET requests. Only versi
 Debug and release builds are located in `build_x64` sub-directory and can be found under sub-directories Debug and Rlease if built with the proper config. 
 
 # Pre-built artifact
-- Pre-built binary HtmlAnalyzer.exe that can be run on Windows is [here](https://github.com/jaySJ/html_analyzer/releases/tag/0.0).
+- Pre-built binary HtmlAnalyzer.exe that can be run on Windows is [here](https://github.com/jaySJ/html_analyzer/releases/tag/v0.2).
 - Sample outputs for OpenMP and non-OpenMP versions are in the repo's root.
 
 # Known issues/limitations
 1. Link "https://raw.githubusercontent.com/nTopology/JIRA-Priority-Icons/master/LICENSE" returns plain text, and not an HTML. Browsers transform the plain text into html for viewing. So the code cannot be expected to find any HTML tags for this URL.
-2. Regex on some VC compiler versions is not handling some JavaScript syntax properly and as such **undercounts some nodes**.
+2. Regex on some VC compiler versions is not handling some JavaScript syntax properly and as such **undercounts some nodes**. Haven't narrowed it down to a specific version yet.
 3. Parallelism is limited to parsing/analyzing the HTML and also basic in nature. No parallelism/async when fetching URL content.
 5. No unit tests
 
