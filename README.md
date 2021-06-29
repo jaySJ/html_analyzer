@@ -1,13 +1,14 @@
 # Html Analyzer
 
-An openMP-enabled multi-threaded C++ porgram that makes GET requests to multiple URL and analyzes the returned HTML body. 
+An openMP-enabled multi-threaded C++ porgram that makes GET requests to multiple URLs and analyzes the returned HTML body. 
 
 **USAGE**
 
 > build_x64\Release\HtmlAnalyzer.exe Urls.txt 4
 
 Input:
-    1. Text file containing URLs for fetching content.
+
+    1. Text file containing URLs from which to fetch html content
     2. Number of threads
 Output:
 ```
@@ -45,18 +46,18 @@ This code uses boost::asio library with openSSL to make GET requests. Only versi
 2. Install NASM
 3. Make sure both Perl and NASM are on your %PATH%
 4. Fire up a Visual Studio Developer Command Prompt with *administrative privileges* (make sure you use the 32-bit one if you are building 32-bit OpenSSL, or the 64-bit one if you are building 64-bit OpenSSL)
-5. From the root of the OpenSSL source directory run the following to generate the build configuration for 64-bit OpenSSL
+5. From the root of the OpenSSL source directory run the following command to generate the build configuration for 64-bit OpenSSL
      ```perl Configure VC-WIN64A no-asm no-shared```
-6. Enter `nmake` to build
-7. (OPTIONAL - this is slow) Enter `nmake test` to run tests for openssl
-8. Enter `nmake install`.  This last step will build install openssl static libraries and include files in C:\Program Files\openSSL.
-9. In order to build Boost::Asio library, you will need to create a new environment variable - OPENSSL_ROOT. 
+6. Run `nmake` to build
+7. Run `nmake test` to run tests for openssl ((OPTIONAL - this is slow))
+8. Run `nmake install`.  This last step will install openssl (static libraries and include files) in C:\Program Files\openSSL.
+9. In order to build Boost::Asio library, you will need to create a new environment variable - OPENSSL_ROOT with the above path as value. 
    `OPENSSL_ROOT=C:\Program Files\OpenSSL`
 #### Boost version 1.75.0
 1. To build boost follow instructions from boost.org for [version 1.75.0](https://www.boost.org/users/history/version_1_75_0.html)
-2. Make sure that `%BOOST_ROOT%` env variable is set to the path to static libraries and include files
+2. Make sure that `%BOOST_ROOT%` env variable is pointed to the root folder that contains 'boost' inside of it.
 
-# Build the code for this repo
+# Now we can build the code for this repo
 1. From a Visual Studio Developer command prompt, call vcvarsall.bat (located at `"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvarsall.bat"`).
 2. Use CMake to build - `cmake -G "Visual Studio 16 2019" -A x64 -S . -B "build_x64"` to generate VS project and solution files with appropriate compiler/linker flags for 2019 (boost/opensll/OpenMP). 
 3. CMakeLists.txt file has been designed with portability for Windows/Linux in mind, but this has not been verified in Linux.
@@ -72,7 +73,7 @@ Debug and release builds are located in `build_x64` sub-directory and can be fou
 # Known issues/limitations
 1. Link "https://raw.githubusercontent.com/nTopology/JIRA-Priority-Icons/master/LICENSE" returns plain text, and not an HTML. Browsers transform the plain text into html for viewing. So the code cannot be expected to find any HTML tags for this URL.
 2. Regex on some VC compiler versions is not handling some JavaScript syntax properly and as such **undercounts some nodes**. Haven't narrowed it down to a specific version yet.
-3. Parallelism is limited to parsing/analyzing the HTML and also basic in nature. No parallelism/async when fetching URL content.
+3. Parallelism is limited to parsing/analyzing the HTML (it also quite basic in nature). No parallelism/async when fetching URL content.
 5. No unit tests
 
 
